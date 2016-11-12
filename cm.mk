@@ -34,8 +34,12 @@ PRODUCT_BRAND := iuni
 PRODUCT_MODEL := u3
 PRODUCT_MANUFACTURER := iuni
 
+PRODUCT_COPY_FILES += \
+    device/iuni/u3/prebuilt/kernel:kernel \
+    device/iuni/u3/dtb:dtb
+
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/iuni/u3
-TARGET_KERNEL_CONFIG := u3_defconfig
+#TARGET_KERNEL_SOURCE := kernel/iuni/u3
+#TARGET_KERNEL_CONFIG := u3_defconfig
 
 $(call inherit-product-if-exists, vendor/iuni/u3/u3-vendor.mk)

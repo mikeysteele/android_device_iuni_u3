@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/e7.mk \
+    $(LOCAL_DIR)/u3.mk \

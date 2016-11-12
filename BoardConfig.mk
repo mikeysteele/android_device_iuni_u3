@@ -23,7 +23,7 @@ TARGET_CPU_VARIANT := krait
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 
-TARGET_BOOTLOADER_BOARD_NAME := e7
+TARGET_BOOTLOADER_BOARD_NAME := u3
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
@@ -31,14 +31,14 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=disabled androidboot.hardware=qcom user_debug=22 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_CUSTOM_BOOTIMG_MK := device/gionee/e7/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/iuni/u3/mkbootimg.mk
 
 # Common Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 COMMON_GLOBAL_CPPFLAGS += -DNO_SECURE_DISCARD
 
 # global
-TARGET_SPECIFIC_HEADER_PATH := device/gionee/e7/include
+TARGET_SPECIFIC_HEADER_PATH := device/iuni/u3/include
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -88,7 +88,7 @@ COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/gionee/e7/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/iuni/u3/bluetooth
 
 # WiFi
 WLAN_MODULES:
@@ -109,7 +109,7 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 
-BOARD_EGL_CFG := device/gionee/e7/egl.cfg
+BOARD_EGL_CFG := device/iuni/u3/egl.cfg
 
 # fix this up by examining /proc/mtd on a running device
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --kernel_offset 0x00008000
@@ -117,12 +117,12 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 3221225472
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_FSTAB := device/gionee/e7/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/iuni/u3/rootdir/fstab.qcom
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/gionee/e7
+TARGET_RELEASETOOLS_EXTENSIONS := device/iuni/u3
 
 # inherit from the proprietary version
--include vendor/gm/e7/BoardConfigVendor.mk
+-include vendor/gm/u3/BoardConfigVendor.mk
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -134,7 +134,7 @@ TARGET_PROVIDES_POWERHAL := true
 #include device/qcom/sepolicy/sepolicy.mk
 
 #BOARD_SEPOLICY_DIRS += \
-    device/gionee/e7/sepolicy
+    device/iuni/u3/sepolicy
 
 #BOARD_SEPOLICY_UNION += \
     device.te \
